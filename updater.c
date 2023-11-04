@@ -218,6 +218,8 @@ int main(int argc, char *argv[])
       usage_warn(1);
       rc = flash_kb_ansi();
     }
+    else
+      rc = usage(argv[0]);
   }
   else if (argc == 3) {
     if (!strcmp(argv[1], "step-2")) {
@@ -227,6 +229,8 @@ int main(int argc, char *argv[])
       usage_warn(1);
       rc = flash_kb(argv[2]);
     }
+    else
+      rc = usage(argv[0]);
   }
   else
     rc = usage(argv[0]);
